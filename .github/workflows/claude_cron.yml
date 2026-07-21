@@ -1,9 +1,10 @@
 name: Run Claude Auto Bot Every 5 Hours
 
 on:
-  schedule:
-    # Chạy tự động mỗi 5 tiếng (vào phút 0 của các giờ 0h, 5h, 10h, 15h, 20h UTC)
-    - cron: '0 */5 * * *'
+schedule:
+    # Cấu hình: Phút 50, vào các giờ 15, 20, 1, 6, 11 (UTC)
+    # Tương ứng giờ Việt Nam (UTC+7): 22h50, 03h50, 08h50, 13h50, 18h50
+    - cron: '50 15,20,1,6,11 * * *'
   workflow_dispatch: # Tạo nút bấm chạy thủ công để test bất cứ lúc nào
 
 jobs:
