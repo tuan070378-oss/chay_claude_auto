@@ -4,8 +4,8 @@ from datetime import datetime
 from playwright.sync_api import sync_playwright
 
 # Lấy Session Key và Chat URL từ biến môi trường của GitHub Secrets
-SESSION_KEY = os.environ.get("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")
-CHAT_URL = os.environ.get("https://claude.ai/chat/91491487-f4c8-4467-be8e-fa8d3f87e69a")
+SESSION_KEY = os.environ.get("SESSION_KEY")
+CHAT_URL = os.environ.get("CHAT_URL")
 
 def send_message():
     with sync_playwright() as p:
